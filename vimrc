@@ -1,5 +1,5 @@
 " URL: 
-" Author: 
+" Author: mi
 " Description: Personal .vimrc file
 "
 " All the plugins are managed via vim-plug, run :PlugInstall to install all
