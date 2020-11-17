@@ -1,5 +1,5 @@
 " URL: 
-" Author: mi
+" Author: n/a
 " Description: Personal .vimrc file
 "
 " All the plugins are managed via vim-plug, run :PlugInstall to install all
@@ -72,7 +72,6 @@ Plug 'ctrlpvim/ctrlp.vim'       " あいまい検索
 Plug 'itchyny/lightline.vim'    " custom statusline
 Plug 'vim-jp/vimdoc-ja'         " help in Japanese
 Plug 'sjl/gundo.vim'            " visualize the undo tree
-" Plug 'glidenote/memolist.vim'   " take memos quickly
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'https://github.com/alok/notational-fzf-vim'
                                 " fzf and notational-fzf
@@ -178,6 +177,7 @@ augroup movecurrentdir
   autocmd BufRead,BufEnter * if isdirectory(expand('%:p:h')) | lcd %:p:h | endif
 augroup END
 
+" }}}
 
 " vimrc関係 *4 {{{2
 
@@ -195,6 +195,8 @@ command! -nargs=* SmartDrop call SmartDrop(<q-args>)
 " vimrcを開くショートカット
 nnoremap <silent> <Leader>v :<C-u>SmartDrop ~/.vim/vimrc<CR>
 nnoremap <silent> <Leader>gv :<C-u>SmartDrop ~/.vim/gvimrc<CR>
+
+" }}}
 
 
 " 4: plugin specific {{{1
@@ -220,20 +222,13 @@ noremap <Leader>gu :GundoToggle<cr>
 " set background=dark
 " colorscheme gruvbox
 
+" ガンダムカラーにした。solarizedを手でコーディングw {{{3
 let g:lightline = { 'colorscheme': 'solarized' }
 set background=dark
 let g:solarized_bold = 0
 colorscheme solarized
 
 
-" " memolist.vim {{{2
-" let g:memolist_path         = expand('~/Dropbox/u/201100_memolist')
-" let g:memolist_memo_suffix  = 'md'
-" " let g:memolist_fzf          = 1
-" nnoremap <Leader>mn  :MemoNew<CR>
-" nnoremap <Leader>ml  :MemoList<CR>
-" nnoremap <Leader>mg  :MemoGrep<CR>
-" 
 " notational-fzf-vim {{{2
 let g:nv_search_paths   = [
   \ '~/Documents/MyNotes/201100_qfixhowm',
@@ -241,7 +236,8 @@ let g:nv_search_paths   = [
   \ '~/Documents/MyNotes/201117_Org' ]
 let g:nv_create_note_window = 'tabedit'
 nnoremap <silent> <Leader>nv :NV<CR>
-" 
+
+
 " qfixhorm {{{2
 " qfixappにruntimepathを通す
 set runtimepath+=~/.vim/vimfiles/pluginjp/qfixapp
@@ -274,15 +270,6 @@ let QFix_UseLocationList = 1
 " キーコードやマッピングされたキー列が完了するのを待つ時間(ミリ秒)
 set timeout timeoutlen=3000 ttimeoutlen=100
 
-" }}}
-
-" ft-changelog {{{2
-" delete later...2020-11-15
-" エントリのフォーマット
-" let g:changelog_username = "mi"
-" let g:changelog_dateformat = "%Y-%m-%d"
-" let g:changelog_new_date_format = "%d  %u\n\n  * %c: \n\n\n"
-" let g:changelog_new_entry_format = "  * %c: "
 " }}}
 
 
