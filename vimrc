@@ -76,6 +76,7 @@ Plug 'sjl/gundo.vim'            " visualize the undo tree
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'https://github.com/alok/notational-fzf-vim'
                                 " fzf and notational-fzf
+Plug 'tpope/vim-fugitive'       " git on vim
 
 Plug 'morhetz/gruvbox'          " color scheme
 Plug 'arcticicestudio/nord-vim' " color scheme
