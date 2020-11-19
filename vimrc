@@ -78,9 +78,7 @@ Plug 'https://github.com/alok/notational-fzf-vim'
 Plug 'tpope/vim-fugitive'       " git on vim
 
 Plug 'morhetz/gruvbox'          " color scheme
-Plug 'arcticicestudio/nord-vim' " color scheme
 Plug 'micke/vim-hybrid'         " color scheme
-" Plug 'jacoborus/tender.vim'     " color scheme
 Plug 'cocopon/iceberg.vim'      " color scheme
 
 Plug 'cocopon/pgmnt.vim'        " color scheme gen tool
@@ -129,7 +127,7 @@ nnoremap <Esc><Esc> :noh<CR><Esc> " ハイライトを消す
 " moving with spacebar
 nnoremap <Space>h 0
 nnoremap <Space>l $
-nnoremap <Space><Space> <C-d>zz
+nnoremap <Space><Space> <C-d>zz " <Space>で<C-d>にする方法がわからない
 nnoremap <S-Space> <C-u>zz
 
 " window move shortcut
@@ -216,17 +214,6 @@ noremap <Leader>gu :GundoToggle<cr>
 
 " カラースキーム {{{2
 
-" hybrid colorscheme {{{3
-" let g:lightline = { 'colorscheme': 'hybrid' }
-" set background=dark
-" let g:hybrid_italic=0       " hybridでitalicをオフ
-" colorscheme hybrid
-
-" nord colorscheme {{{3
-" let g:lightline = { 'colorscheme': 'nord' }
-" let g:nord_cursor_line_number_background = 1
-" colorscheme nord
-
 " gruvbox colorscheme {{{3
 " let g:lightline = { 'colorscheme': 'gruvbox' }
 " set background=dark
@@ -242,6 +229,7 @@ noremap <Leader>gu :GundoToggle<cr>
 let g:lightline = { 'colorscheme': 'iceberg' }
 set background=dark
 colorscheme iceberg
+
 
 " notational-fzf-vim {{{2
 let g:nv_search_paths   = [
