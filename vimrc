@@ -84,6 +84,8 @@ Plug 'micke/vim-hybrid'         " color scheme
 Plug 'cocopon/iceberg.vim'      " color scheme
 
 Plug 'cocopon/pgmnt.vim'        " color scheme gen tool
+Plug 'guns/xterm-color-table.vim'
+                                " show color table
 
 call plug#end()
 
@@ -129,6 +131,12 @@ nnoremap <Space>h 0
 nnoremap <Space>l $
 nnoremap <Space><Space> <C-d>zz
 nnoremap <S-Space> <C-u>zz
+
+" window move shortcut
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
+nnoremap <c-l> <c-w><c-l>
+nnoremap <c-h> <c-w><c-h>
 
 " insert mode / emacs like
 inoremap <C-b> <Left>
