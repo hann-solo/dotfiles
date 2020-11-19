@@ -81,7 +81,9 @@ Plug 'morhetz/gruvbox'          " color scheme
 Plug 'arcticicestudio/nord-vim' " color scheme
 Plug 'micke/vim-hybrid'         " color scheme
 " Plug 'jacoborus/tender.vim'     " color scheme
-" Plug 'cocopon/iceberg.vim'      " color scheme
+Plug 'cocopon/iceberg.vim'      " color scheme
+
+Plug 'cocopon/pgmnt.vim'        " color scheme gen tool
 
 call plug#end()
 
@@ -223,11 +225,15 @@ noremap <Leader>gu :GundoToggle<cr>
 " colorscheme gruvbox
 
 " ガンダムカラーにした。solarizedを手でコーディングw {{{3
-let g:lightline = { 'colorscheme': 'solarized' }
-set background=dark
-let g:solarized_bold = 0
-colorscheme solarized
+" let g:lightline = { 'colorscheme': 'solarized' }
+" set background=dark
+" let g:solarized_bold = 0
+" colorscheme solarized
 
+" icebergに変更（ガンダムカラー用）
+let g:lightline = { 'colorscheme': 'iceberg' }
+set background=dark
+colorscheme iceberg
 
 " notational-fzf-vim {{{2
 let g:nv_search_paths   = [
