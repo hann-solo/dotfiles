@@ -85,6 +85,7 @@ Plug 'hann-solo/vim-deep-space'
 Plug 'hann-solo/vim-one-g'
 
 Plug 'cocopon/pgmnt.vim'        " tool for iceberg
+Plug 'cocopon/inspecthi.vim'    " hi inspector
 
 
 call plug#end()
@@ -233,16 +234,16 @@ noremap <Leader>gu :GundoToggle<cr>
 " colorscheme iceberg
 
 " deep-spaceに変更（ガンダムカラー用）
-" let g:lightline = { 'colorscheme': 'deepspace' }
-" set background=dark
-" set termguicolors
-" colorscheme deep-space
-" 
-" one-vimに変更（ガンダムカラー用）
-let g:lightline = { 'colorscheme': 'one' }
-set background=dark
+let g:lightline = { 'colorscheme': 'deepspace' }
 set termguicolors
-colorscheme one
+set background=dark
+colorscheme deep-space
+ 
+" one-vimに変更（ガンダムカラー用）
+"let g:lightline = { 'colorscheme': 'one' }
+"set termguicolors
+"set background=dark
+"colorscheme one
 
 " notational-fzf-vim {{{2
 let g:nv_search_paths   = [
