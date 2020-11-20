@@ -77,13 +77,15 @@ Plug 'https://github.com/alok/notational-fzf-vim'
                                 " fzf and notational-fzf
 Plug 'tpope/vim-fugitive'       " git on vim
 
-Plug 'morhetz/gruvbox'          " color scheme
-Plug 'micke/vim-hybrid'         " color scheme
-Plug 'cocopon/iceberg.vim'      " color scheme
+" colorschemes
+Plug 'micke/vim-hybrid'
+Plug 'morhetz/gruvbox'
+Plug 'cocopon/iceberg.vim'
+Plug 'hann-solo/vim-deep-space'
+Plug 'hann-solo/vim-one-g'
 
-Plug 'cocopon/pgmnt.vim'        " color scheme gen tool
-Plug 'guns/xterm-color-table.vim'
-                                " show color table
+Plug 'cocopon/pgmnt.vim'        " tool for iceberg
+
 
 call plug#end()
 
@@ -226,10 +228,21 @@ noremap <Leader>gu :GundoToggle<cr>
 " colorscheme solarized
 
 " icebergに変更（ガンダムカラー用）
-let g:lightline = { 'colorscheme': 'iceberg' }
-set background=dark
-colorscheme iceberg
+" let g:lightline = { 'colorscheme': 'iceberg' }
+" set background=dark
+" colorscheme iceberg
 
+" deep-spaceに変更（ガンダムカラー用）
+" let g:lightline = { 'colorscheme': 'deepspace' }
+" set background=dark
+" set termguicolors
+" colorscheme deep-space
+" 
+" one-vimに変更（ガンダムカラー用）
+let g:lightline = { 'colorscheme': 'one' }
+set background=dark
+set termguicolors
+colorscheme one
 
 " notational-fzf-vim {{{2
 let g:nv_search_paths   = [
